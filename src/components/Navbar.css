@@ -164,13 +164,12 @@ li a.active {
     transition: transform 0s ease-in-out;
     z-index: 5;
   }
- 
   .nav-links ul {
     flex-direction: column;
     width: 100%;
   }
   .nav-links li {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   .nav-links li a:hover {
     color: #1c3441;
