@@ -1,0 +1,252 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+  
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.wave-wrapper2 {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+}
+  
+.wave-img2 {
+    width: 100%;
+    height: 115%;
+    object-fit: cover;
+}
+
+.service_component {
+    position: relative; /* Add relative positioning to establish a containing block */
+    text-align: center;
+    margin-top: 0; /* Ensure full width on large screens */
+}
+  
+.services_heading_container {
+    text-align: center;
+    margin-top: 2rem; /* Adjust the top margin as needed */
+    padding: 2.5rem 0;
+    margin-top: 6.25rem;
+}
+
+.our_services_container {
+    /* position: absolute; 
+    top: 45%; 
+    left: 50%; 
+    bottom: 30%;
+    transform: translate(-50%, -50%); */
+    text-align: center; 
+}
+  
+.heading-small {
+    font-family: "Poppins Semibold";
+    color: #284B63;
+    font-size: 14px;
+    line-height: 2.14;
+    letter-spacing: .9px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+  
+.heading-large {
+    font-family: "Poppins Bold";
+    font-size: 2.65rem;
+    color: #232323;
+    margin-top: 0;
+    letter-spacing: -.7px;
+    margin-bottom: .375rem;
+    line-height: 1.1;
+}
+
+.services_outer {
+    display: flex;
+    justify-content: space-between; /* Align items with equal space between them */
+    /* background-color: #f8f8f8; */
+    padding: 5.75rem 24px 0;
+    overflow: hidden;
+    margin-bottom: 3.375rem;
+}
+.branding {
+    background-color: #f8f8f8;
+}
+
+.services_container{
+    max-width: 1190px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 3.375rem;
+}
+
+.service_first, .service_second {
+    flex-basis: 48%;
+}
+.heading-large{
+    font-family: "Poppins Bold";
+    font-size: 2.75rem;
+    color: #232323;
+    margin-top: 0;
+    letter-spacing: -.7px;
+    margin-bottom: 1.375rem;
+    line-height: 1.1;
+}
+
+.service_second {
+    margin-left: 4%;
+}
+.service_description{
+    font-family: "Work Sans";
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: normal;
+    margin-bottom: 2.5rem;
+}
+
+.service_types .ordered li{
+    counter-increment: item;
+}
+
+.service_lists{
+    list-style-type: none;
+    counter-reset: item;
+    columns: 2;
+    padding: 0;
+    margin: 0;
+    margin-left: 1.5rem;
+}
+
+.service_lists li{
+    margin-bottom: 23px;
+    font-family: "Work Sans Medium";
+    white-space: nowrap;
+}
+
+.service_lists li::marker {
+    content: "●";
+    color: #284B63; 
+    font-size: 13px; 
+    margin-right: 5px;
+  }
+
+
+
+/* free consultation */
+.wave-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Adjust the height of the wave as needed */
+    overflow: hidden; /* Hide any overflow */
+}
+  
+.wave-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust vertical positioning as needed */
+}
+  
+.consultation {
+    position: relative; /* Ensure the section has a relative positioning context for the absolute positioning of the wave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    padding: 3rem 0;
+}
+  
+.consultation-content {
+    text-align: center;
+    margin-left: 2rem;
+}
+  
+.consultation h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+  
+.consultation p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-family: "Work Sans";
+    letter-spacing: normal;
+}
+  
+.consultation-button {
+    display: inline-flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center;
+    font-size: 16px;
+    background-color: #284b63;
+    color: white;
+    padding: 0 1.5625rem;
+    font-family: "Poppins Semibold";
+    border-radius: 6.25rem;
+    letter-spacing: 1px;
+    height: 44px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: relative; /* or position: absolute; */
+    z-index: 2;
+}
+  
+.consultation-button:hover {
+    background-color: #1c3441;
+}
+
+@media (max-width: 768px){
+    .wave-wrapper2 {
+        height: 76%; /* Adjust the wave height for mobile */
+    }
+
+    .wave-wrapper {
+        height: 40%; /* Adjust the wave height for mobile */
+    }
+    
+    .services_outer {
+        flex-direction: column; /* Stack services on top of each other */
+        padding: 3.75rem 24px 0; /* Adjust padding for mobile */
+      }
+    
+      .service_first, .service_second {
+        flex-basis: 100%; /* Take full width on mobile */
+      }
+    
+      .service_second {
+        margin-left: 0; /* Remove left margin on mobile */
+      }
+
+    .consultation h2 {
+        font-size: 1.8rem; /* Reduce font size on smaller screens */
+    }
+    
+    .consultation p {
+        font-size: 1rem; /* Reduce font size on smaller screens */
+    }
+    
+    .consultation-button {
+        font-size: 0.9rem; /* Adjust font size on smaller screens */
+        padding: 0.8rem 1.2rem; /* Adjust button padding on smaller screens */
+    }
+}

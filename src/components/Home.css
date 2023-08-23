@@ -1,0 +1,436 @@
+.background-image {
+  background-image: url("../png/bg2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  background-position: center;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: flex-start;
+  color: white;
+  padding-left: 4rem;
+}
+
+.background-image .title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.description-more {
+  font-size: 1rem;
+  margin-top: 1rem;
+  
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+
+.background-image .button.home-button {
+  background-color: white;
+  color: black;
+}
+
+.background-image .button.home-button:hover {
+  background-color: #284b63;
+  color: black;
+}
+
+.background-image .button:active {
+  transform: scale(0.95);
+}
+
+/* image & below section */
+.below-page {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem; /* Add some spacing around the content */
+  margin-top: 3.25rem;
+  margin-bottom: 3.375rem;
+}
+
+.page-image {
+  flex-basis: 50%;
+  padding-right: 2rem;
+  max-width: 100%; 
+  max-height: 100%; 
+  display: flex;
+  align-items: center;
+}
+
+.page-image img {
+  max-width: 650px;
+  max-height: 650px; 
+  object-fit: contain; 
+}
+
+.page-big {
+  flex: 1; 
+}
+
+.page-title{
+  font-family: "Poppins Bold";
+  font-size: 2.30rem;
+  color: #232323;
+  margin-top: 0;
+  letter-spacing: -.7px;
+  margin-bottom: .375rem;
+  line-height: 1.1;
+  padding-left: 0;
+  text-align: left;
+}
+
+.page-description{
+  font-family: "Work Sans";
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: normal;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.pre-step{
+  font-family: "Work Sans";
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: normal;
+  margin-bottom: 0.75rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.pre-step li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.pre-step .icon {
+  font-size: 1rem; /* Adjust the size of the icon */
+  margin-right: 0.5rem; /* Add spacing between the icon and the text */
+  display: block;
+  color: #284B63;
+}
+
+.step-text {
+  margin-left: 10px; /* Adjust this value to control the space between icon and text */
+}
+
+/* Services */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.brandings {
+  background-color: #f8f8f8;
+}
+
+.service_component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the items vertically */
+  align-items: center; /* Center the items horizontally */
+  text-align: center; /* Center the text within the container */
+  margin-top: 30px; 
+  max-width: 100%; /* Ensure full width on large screens */
+}
+
+.home_services_heading_container {
+  flex: 1; /* Take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Add space between the headings */
+  margin-top: 3.25rem;
+}
+
+.our_services_container {
+  flex-basis: 100%; /* Take full width on small screens */
+  margin-bottom: 20px; /* Add space between the headings */
+  max-width: 100%;
+}
+
+.heading-small {
+  font-family: "Poppins Semibold";
+  color: #284B63;
+  font-size: 14px;
+  line-height: 2.14;
+  letter-spacing: .9px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.heading-large {
+  font-family: "Poppins Bold";
+  font-size: 2.65rem;
+  color: #232323;
+  margin-top: 0;
+  letter-spacing: -.7px;
+  margin-bottom: .375rem;
+  line-height: 1.1;
+}
+
+.services_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the service boxes horizontally */
+  align-items: center; /* Center the service boxes vertically */
+  margin-top: 30px;
+  text-align: center;
+}
+
+.service_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.services_box {
+  /* flex-basis: calc(50% - 20px); */
+  flex-basis: calc(33.33% - 20px);
+  border-radius: 10px;
+  width: 100%; /* Adjust this value to make the boxes full width on large screens */
+  max-width: 400px;
+  background-color: white;
+  padding: 20px 20px;
+  transition: 0.4s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 1px 1px 1px rgba(0,0,0,.004) */
+  margin: 3px;
+}
+
+.services_box:hover {
+  transform: scale(0.97);
+}
+
+.icon {
+  font-size: 48px;
+  color: #284b63;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-family: "Poppins Semibold";
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -.4px;
+  margin-bottom: 1.25rem;
+}
+
+.service_text {
+  font-family: "Work Sans";
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: normal;
+}
+
+.discover_more_wrapper {
+  margin-top: 20px; /* Adjust the margin as needed */
+  margin-bottom: 3.25rem;
+}
+
+.read_more {
+  display: inline-flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 6.25rem;
+  letter-spacing: 1px;
+  min-width: 162px;
+  height: 44px;
+  padding: 0 1.5625rem;
+  font-family: "Poppins Semibold";
+  border: none;
+  cursor: pointer;
+  background-color: #284b63;
+  color: #fff;
+  text-decoration: none;
+}
+
+.read_more:hover {
+  background-color: #1c3441;
+  cursor: pointer;
+}
+
+/* free consultation */
+.wave-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* Adjust the height of the wave as needed */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.wave-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjust vertical positioning as needed */
+}
+
+.consultation {
+  position: relative; /* Ensure the section has a relative positioning context for the absolute positioning of the wave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 3rem 0;
+}
+
+.consultation-content {
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.consultation h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.consultation p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.consultation-button {
+  display: inline-flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center;
+  font-size: 16px;
+  background-color: #284b63;
+  color: white;
+  padding: 0 1.5625rem;
+  font-family: "Poppins Semibold";
+  border-radius: 6.25rem;
+  letter-spacing: 1px;
+  height: 44px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative; /* or position: absolute; */
+  z-index: 2;
+}
+
+.consultation-button:hover {
+  background-color: #1c3441;
+}
+
+@media (max-width: 768px) and (min-width: 481px),
+       (max-width: 992px) and (min-width: 769px) {
+  .background-image {
+    align-items: center;
+    padding-left: 2rem;
+  }
+  .below-page{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  .page-image {
+    flex-basis: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  .page-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  } 
+  .service_component {
+    align-items: center;
+    text-align: center;
+  }
+  /* .services_container {
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .service_box {
+    flex-basis: 100%;
+  } */
+
+  .services_container {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .services_box {
+    flex-basis: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .discover_more_wrapper {
+    text-align: center; /* Center the "Discover More" link on mobile */
+  }
+
+  .read_more {
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1rem;
+  }
+  .button {
+    font-size: 0.9rem;
+    margin-bottom: 3.25rem;
+  }
+  .wave-wrapper {
+    height: 40%; /* Adjust the wave height for mobile */
+  }
+
+  .consultation h2 {
+    font-size: 1.8rem; /* Reduce font size on smaller screens */
+  }
+
+  .consultation p {
+    font-size: 1rem; /* Reduce font size on smaller screens */
+  }
+
+  .consultation-button {
+    font-size: 0.9rem; /* Adjust font size on smaller screens */
+    padding: 0.8rem 1.2rem; /* Adjust button padding on smaller screens */
+  }
+}
+

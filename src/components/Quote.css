@@ -1,0 +1,40 @@
+.quote_wave-container {
+    position: relative;
+    margin-top: -1px; /* Adjust this value for desired spacing */
+    margin-bottom: 6rem;
+    width: 100%;
+}
+  
+.quote_wave-wrapper2 {
+    position: absolute;
+    top: -5px;
+    left: 48.8%; /* Adjust this value */
+    width: 100vw; /* Change width to 100vw */
+    transform: translateX(-50%); /* Center the image horizontally */
+    height: 110%;
+    z-index: -1;
+}
+  
+.quote_wave-img2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .quote_wave-container {
+        position: relative;
+        margin-top: -1px; /* Adjust this value for desired spacing */
+        margin-bottom: 6.25rem;
+        width: 100%;
+    }
+    .quote_wave-wrapper2 {
+        left: 48.2%;
+    }
+    
+    .quote_wave-img2 {
+        width: 100%;
+        height: auto;
+    }
+
+}

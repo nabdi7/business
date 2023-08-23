@@ -1,0 +1,389 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+div {
+  display: block;
+}
+
+.about-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 1.75rem;
+  position: relative;
+}
+
+.about_wave-wrapper2 {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+}
+
+.about_wave-img2 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.company_container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1190px;
+  margin-left: 20px; /* Add margin to create space between image and content */
+  margin-top: 5.25rem;
+}
+
+.company-info {
+  flex: 0 1 58.3333333%;
+  max-width: 58.3333333%;
+}
+
+.about_title {
+  font-family: "Poppins Bold";
+  font-size: 2.75rem;
+  color: #232323;
+  margin-top: 0;
+  letter-spacing: -.7px;
+  margin-bottom: 3.375rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.title_decor {
+  padding-bottom: 2.9375rem;
+  margin-bottom: 2.0625rem;
+  position: relative;
+}
+
+.title_decor::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 56px;
+  background: #284B63;
+  bottom: 0;
+}
+
+.company-info .text{
+  margin-bottom: 1.375rem;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+.company-info .text span {
+  display: block;
+  text-align: center; 
+}
+
+.text-italic {
+  position: relative;
+  right: 50px;/* Adjust this value to move the text more to the left */
+  
+}
+
+.company-text {
+  -ms-flex: 0 0 58.3333333%;
+  flex: 0 0 58.3333333%;
+  max-width: 58.3333333%;
+  padding-right: 15px;
+}
+
+.mission-text .text{
+  margin-bottom: 1.375rem;
+  line-height: 1.6;
+}
+
+.company-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-image img {
+  max-width: 100%;
+  max-height: 220px;
+}
+
+.mission-text {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.socials {
+  margin-bottom: 20px;
+}
+
+.socials h3 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.our-process{
+  margin-bottom: 20px;
+  margin-top: 40px;
+  background: #f8f8f8;
+  padding: 5.75rem 24px 0;
+  overflow: hidden;
+  padding-bottom: 5.375rem;
+}
+.business_container{
+  max-width: 1190px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.workflow-body{
+  justify-content: space-between;
+  align-items: center;
+}
+.workflow-body .text{
+  margin-bottom: 1.375rem;
+  line-height: 1.6;
+}
+.text{
+  font-family: "Work Sans";
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: normal; 
+  color: #232323;
+}
+
+.workflow-steps {
+  padding-top: 5.5rem;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-step {
+  flex: 1;
+  text-align: center;
+}
+
+.step {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #284B63;
+  color: #fff;
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.step i {
+  font-size: 24px;
+  line-height: 50px;
+  font-family: "Work Sans";
+}
+
+.step-title {
+  display: block;
+  width: 100%;
+  color: #232323;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-family: "Work Sans";
+}
+
+.step-description {
+  font-family: "Work Sans";
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: normal; 
+  color: #232323;
+}
+
+.team {
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center; 
+}
+
+.team-member {
+  margin: 10px;
+  width: 250px;
+}
+
+.team-member__image img {
+  max-width: 100%;
+  max-height: 200px;
+  margin-bottom: 10px;
+}
+
+.team-member__body {
+  padding: 10px;
+  text-align: left;
+}
+
+.team-member__title {
+  font-family: "Poppins Bold";
+  font-size: 16px;
+  margin-bottom: 0.25rem;
+} 
+/* .team-p{
+  font-size: 14px;
+  color: #596068;
+  text-align: center;
+} */
+.team-member__subtitle {
+  font-size: 14px;
+  color: #8ca5c6;
+}
+
+.team-member__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member__body {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+  margin-bottom: 3.25rem;
+}
+
+.team-member:hover .team-member__body {
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+  .about-company {
+    flex-direction: column; /* Display as columns in mobile view */
+    align-items: center;
+    margin-bottom: 10px; /* Reduce spacing between sections in mobile view */
+    max-width: 100%;
+  }
+  .about_wave-wrapper2 {
+    top: -20px;
+    width: 100%;
+    height: 130%;
+}
+
+  .about_wave-img2 {
+    width: 100%;
+    height: 19%;
+    object-fit: cover;
+  }
+  .company_container {
+    flex-direction: column;
+  }
+
+  .company-info {
+    flex: 0 0 100%; /* Change flex value to make it full width on smaller screens */
+    max-width: 100%;
+  }
+
+  .company-info .text {
+    margin-bottom: 1.375rem;
+    line-height: 1.6;
+  }
+  .company-text {
+    flex: 0 0 100%; /* Change flex value to make it full width on smaller screens */
+    max-width: 100%;
+  }
+  .company-image {
+    margin-top: 20px;
+    margin-bottom: 1.375rem;
+  }
+  
+  .text-italic {
+    left: 0;
+    margin-left: -7px; 
+  }
+  .title_decor::before {
+    left: 50%; /* Move the line to the center horizontally */
+    transform: translateX(-50%); /* Center the line using transform */
+  }
+  .socials {
+    text-align: center; /* Center the text in mobile view */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center the icons in mobile view */
+  }
+
+  .workflow-steps {
+    flex-direction: column;
+  }
+
+  .progress {
+    flex-direction: column;
+  }
+
+  .progress-step {
+    margin-bottom: 20px;
+  }
+
+  .step {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+
+  .team-members {
+    display: grid; /* Use CSS grid for the team members container */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+  }
+
+  .team-member {
+    width: auto; /* Make team members occupy full width in mobile view */
+  }
+}
