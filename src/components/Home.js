@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import  './Home.css';
 import Client from './Client';
 import './Client.css';
+import LiveChatComponent from './LiveChatComponent'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPalette, faFileCode, faHandshake, faChartLine, faCheckCircle, faLightbulb, faCheck } from '@fortawesome/free-solid-svg-icons';
 import waveImage from '../png/wave2.svg';
@@ -164,7 +165,7 @@ const Home = () => {
           <Link to="/contact" className="consultation-button" onClick={scrollToContact}>Get A Free Consultation</Link>
         </div>
       </section>
-
+      <LiveChatComponent />
       {/* <Subscription /> */}
     </>
   );
