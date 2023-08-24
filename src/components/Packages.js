@@ -131,7 +131,7 @@ const Packages = () => {
       {/* FAQ Section */}
       <section className="faq-section">
         <h2 className='questions'>Questions</h2>
-        <h4>Frequently asked, fully answered.</h4>
+        <h4 className='freq-asked'>Frequently asked, fully answered.</h4>
         <div className="faq-list">
         {faqData.map((item, index) => (
           <div className={`faq-item ${item.isOpen ? 'show-answer' : ''}`} key={index}>

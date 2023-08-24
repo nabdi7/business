@@ -136,9 +136,9 @@ const Home = () => {
                 <FontAwesomeIcon icon={faChartLine} />
               </div>
                 <h3 className='description'> Digital Strategy</h3>
-              <p className='service_text'>
-              Our digital strategy service provides tailored plans and cutting-edge approaches to help your business thrive in the digital landscape.
-              </p>
+                <p className='service_text'>
+                Our digital strategy service provides tailored plans and cutting-edge approaches to help your business thrive in the digital landscape.
+                </p>
             </div>
           </div>
           <div className="discover_more_wrapper">
