@@ -19,7 +19,7 @@ const Subscription = () => {
       setSubscriptionMessage('Thank you for subscribing!');
       setTimeout(() => {
         setSubscriptionMessage('');
-      }, 5000);
+      }, 2000);
     }
   };
 

@@ -182,6 +182,11 @@ textarea {
 .send-message-button:hover{
   background-color: #1c3441;
 }
+
+.thank-you-message {
+  color: green; /* Change this color to your desired color */
+}
+
 .message-me {
   flex-basis: 48%;
   margin-bottom: 0;

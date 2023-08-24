@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import waveImage from '../png/wave6.svg';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { BsInstagram, BsTwitter } from 'react-icons/bs';
-// import Subscription from './Subscription';
-// import './Subscription.css';
 
 const Contact = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [contactMessage, setContactMessage] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+
+    setTimeout(() => {
+      setFormSubmitted(true);
+      setContactMessage('We got your message. Thanks!');
+      setTimeout(() => {
+        setContactMessage('');
+        setName('');
+        setPhone('');
+        setEmail('');
+        setMessage('');
+        setFormSubmitted(false); 
+      }, 2000);
+    }, 1000); 
+  };
+
   return (
     <> 
-    
     <section className='contact-page'>
       <div className="contact_wave-container">
         <div className="contact_wave-wrapper2">
@@ -53,14 +74,42 @@ const Contact = () => {
       <div className='contact-sections'>
         <div className='get-in-touch'>
           <h3>Get In Touch</h3>
-          <form>
-            <input type='text' placeholder='Name' required />
-            <input type='tel' placeholder='Phone' required />
-            <input type='email' placeholder='Email' required />
-            <textarea placeholder='Your Message' rows='5' required></textarea>
-            <button className="send-message-button" type="submit">
+          <form onSubmit={handleSubmit}>
+            <input type='text'
+              placeholder='Name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <input
+              type='tel'
+              placeholder='Phone'
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <input
+              type='email'
+              placeholder='Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <textarea
+              placeholder='Your Message'
+              rows='5'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            ></textarea>
+            <button className='send-message-button' type='submit'>
               Send Message
             </button>
+            {formSubmitted && (
+              <p className='thank-you-message'>
+                We received your inquiry. Thanks!
+              </p>
+            )}
           </form>
         </div>
         <div className='message-me'>
@@ -81,8 +130,6 @@ const Contact = () => {
     {/* <Subscription /> */}
     </>
 
-    // email configuration
-    // use this link https://www.youtube.com/watch?v=PI-tGsvDoIU&ab_channel=ByteGrad
   );
 };
 
