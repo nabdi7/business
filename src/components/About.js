@@ -1,13 +1,12 @@
 import React from 'react';
 import './About.css';
 import missionImage from '../png/about.jpg'; 
-import { FaLightbulb, FaFileAlt, FaPalette, FaCode, FaDesktop, FaRocket, FaTrophy, FaWrench } from 'react-icons/fa';
+import { FaLightbulb, FaFileAlt, FaPalette, FaCode, FaDesktop, FaRocket, FaTrophy } from 'react-icons/fa';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import waveImage from '../png/wave6.svg';
 import memberImage1 from '../png/user.jpg';
 import memberImage2 from '../png/user.jpg';
 import memberImage3 from '../png/user.jpg';
-import missionImage2 from '../png/strategy.jpg';
 import Client from './Client';
 import './Client.css';
 
