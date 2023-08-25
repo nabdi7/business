@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router basename='http://nabdi7.github.io/business'>
+      <Router>
         <Navbar />
         <Routes>
           <Route index element={<Home />}  />
