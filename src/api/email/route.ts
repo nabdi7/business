@@ -4,7 +4,7 @@ import { QualityDesignsEmail } from "../../emails/welcome";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function GET() {
+export async function POST() {
   const userFirstname = "Zeno"; // Set the user's first name here
   await resend.sendEmail({
     from: 'onboarding@resend.dev',

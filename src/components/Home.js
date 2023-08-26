@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import  './Home.css';
 import Client from './Client';
@@ -8,14 +8,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPalette, faFileCode, faHandshake, faChartLine, faCheckCircle, faLightbulb, faCheck } from '@fortawesome/free-solid-svg-icons';
 import waveImage from '../png/wave2.svg';
 import someImage from '../png/Untitled2.png';
+// import ParticlesBg from 'particles-bg'; 
 
 const Home = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.scroll-animation');
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3, // Adjust this threshold value as needed
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+    
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+  
   const scrollToServices = (event) => {
-    event.preventDefault(); // Prevent the default link behavior
+    event.preventDefault();
     navigate('/services');
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0);
   };
 
   const scrollToContact = () => {
@@ -24,11 +51,13 @@ const Home = () => {
   };
 
   const scrollToAbout = () => {
-    navigate('/contact');
+    navigate('/about');
     window.scrollTo(0, 0);
   };
+
   return (
     <>
+      {/* <ParticlesBg type="cobweb" num={50} bg={true} color="#284b63"/> */}
       <div className='background-image'>
         <h1 className='title'>Powering Your Digital Success</h1>
         <p className='description'>We Bring Your Business Ideas to Life</p>
@@ -42,10 +71,10 @@ const Home = () => {
       </div>
 
       <section className='below-page'>
-        <div className='page-image'>
+        <div className='page-image scroll-animation'>
           <img src={someImage} alt='' />
         </div>
-        <div className='below-page-container'>
+        <div className='below-page-container scroll-animation'>
           <div className='page-big'>
             <div className='content-wrapper'>
               <h1 className='page-title'>We solve the hardest parts of your business</h1>
@@ -84,7 +113,7 @@ const Home = () => {
         </section>
         <section className="services_container">
           <div className='service_items'>
-            <div className="services_box">
+            <div className="services_box scroll-animation">
               <div className="icon">
                 <FontAwesomeIcon icon={faPalette} />
               </div>
@@ -94,7 +123,7 @@ const Home = () => {
                 to their audience and sets them apart from competitors.
               </p>
             </div>
-            <div className="services_box">
+            <div className="services_box scroll-animation">
               <div className="icon">
                 <FontAwesomeIcon icon={faFileCode} />
               </div>
@@ -104,7 +133,7 @@ const Home = () => {
                 seamless and attractive online presence for your business.
               </p>
             </div>
-            <div className="services_box">
+            <div className="services_box scroll-animation">
               <div className="icon">
                 <FontAwesomeIcon icon={faHandshake} />
               </div>
@@ -113,7 +142,7 @@ const Home = () => {
                 Our SEO service helps your website rank higher on search engines, bringing more traffic and customers to your business.
               </p>
             </div>
-            <div className="services_box">
+            <div className="services_box scroll-animation">
               <div className="icon">
                 <FontAwesomeIcon icon={faCheckCircle} />
               </div>
@@ -122,7 +151,7 @@ const Home = () => {
                 Our Quality Assurance service ensures seamless functionality and top-notch performance for your digital products.
               </p>
             </div>
-            <div className="services_box">
+            <div className="services_box scroll-animation">
               <div className="icon">
                 <FontAwesomeIcon icon={faLightbulb} />
               </div>
@@ -131,7 +160,7 @@ const Home = () => {
                 Our content creation service offers captivating visual storytelling through stunning photography and videography, conveying your brand's essence.
               </p>
             </div>
-            <div className="services_box">
+            <div className="services_box scroll-animation">
               <div className="icon">
                 <FontAwesomeIcon icon={faChartLine} />
               </div>

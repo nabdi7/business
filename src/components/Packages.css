@@ -21,6 +21,17 @@ p {
   margin-inline-end: 0px;
 }
 
+.scroll-animation {
+  opacity: 0; /* Initially hide the element */
+  transform: translateY(20px); /* Move the element down a bit */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-animation.animate {
+  opacity: 1; /* Show the element when it's in the viewport */
+  transform: translateY(0); /* Move the element to its original position */
+}
+
 div {
   display: block;
 }

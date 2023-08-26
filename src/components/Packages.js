@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Packages.css';
 import Subscription from './Subscription';
 import './Subscription.css';
 import waveImage from '../png/wave6.svg';
+// import ParticlesBg from 'particles-bg'; 
+
 
 const Packages = () => {
   const [faqData, setFaqData] = useState([
@@ -57,9 +59,37 @@ const Packages = () => {
     navigate('/contact');
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
-
+  useEffect(() => {
+    const elements = document.querySelectorAll('.scroll-animation');
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3, // Adjust this threshold value as needed
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+  
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  
+    return () => {
+      elements.forEach(element => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+  
   return (
     <>
+    {/* <ParticlesBg type="cobweb" num={50} bg={true} color="#284b63"/> */}
       <section className="packages-page">
         <div className="package_wave-container">
           <div className="package_wave-wrapper2">
@@ -68,7 +98,7 @@ const Packages = () => {
         </div>
         <h2 className="section-title">Choose the plan that fits your needs.</h2>
         <div className="packages-list">
-          <div className="package-item most-popular">
+          <div className="package-item most-popular scroll-animation">
             {/* <div className="popular-badge">Most popular</div> */}
             <h3>Standard</h3>
             <p className="package-price">$500</p>
@@ -87,7 +117,7 @@ const Packages = () => {
               <button>Request Consultation</button>
             </Link>
           </div>
-          <div className="package-item premium-package">
+          <div className="package-item premium-package scroll-animation">
             <h3>Premium</h3>
             <p className="package-price">$1,000</p>
             <ul>
@@ -106,7 +136,7 @@ const Packages = () => {
               <button>Request Consultation</button>
             </Link>
           </div>
-          <div className="package-item">
+          <div className="package-item scroll-animation">
             <h3>Corporate</h3>
             <p className="package-price">Let's talk</p>
             <ul>
@@ -132,7 +162,7 @@ const Packages = () => {
       <section className="faq-section">
         <h2 className='questions'>Questions</h2>
         <h4 className='freq-asked'>Frequently asked, fully answered.</h4>
-        <div className="faq-list">
+        <div className="faq-list scroll-animation">
         {faqData.map((item, index) => (
           <div className={`faq-item ${item.isOpen ? 'show-answer' : ''}`} key={index}>
             <h3 onClick={() => toggleAnswer(index)}>
