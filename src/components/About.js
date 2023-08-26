@@ -171,7 +171,7 @@ const About = () => {
               <img src={memberImage2} alt="Founder" />
             </div>
             <div className="team-member__body">
-              <h3 className="team-member__title">Hamza Hajir</h3>
+              <h3 className="team-member__title">Hamza </h3>
               <p className="team-member__subtitle">UX Designer</p>
             </div>
           </div>
@@ -182,7 +182,7 @@ const About = () => {
               <img src={memberImage3} alt="Founder" />
             </div>
             <div className="team-member__body">
-              <h3 className="team-member__title">Abdifatah Abdi</h3>
+              <h3 className="team-member__title">Abdifatah</h3>
               <p className="team-member__subtitle">Developer</p>
             </div>
           </div>
