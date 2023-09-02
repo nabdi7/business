@@ -23,7 +23,7 @@ const About = () => {
         <div className="company_container">
           <div className="company-info">
             <h3 className='about_title title_decor'>
-              <span className="vertical-text">About Our Company</span>
+              <span className="vertical-text">About Our Agency</span>
             </h3>
             <p className='text text-italic'>
               <span>Our goal is to empower businesses through</span>
