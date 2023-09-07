@@ -36,7 +36,7 @@ const Packages = () => {
     },
     {
       question: 'My question isn\'t in this list!',
-      answer: 'Please reach out to us at abdinajka@gmail.com with your question and we\'ll get back to you shortly.',
+      answer: 'Please reach out to us at info@qualitydesigns.com with your question and we\'ll get back to you shortly.',
       isOpen: false,
     },
     // Add more FAQ items as needed

@@ -111,8 +111,8 @@ const Services = () => {
           <div className="service_types">
             <ol className="service_lists">
               <li>SEO</li>
-              <li>Analytics and Reporting</li>
               <li>Content Marketing</li>
+              <li>Analytics and Reporting</li>
               <li>Social Media Marketing</li>
               <li>Email Marketing</li>
             </ol>
