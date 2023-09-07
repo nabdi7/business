@@ -18,7 +18,7 @@ const Projects = () => {
     {
       category: 'All',
       projects: [
-        { id: 1, image: projectImage1, alt: 'High School in Kent' },
+        { id: 1, image: projectImage1, alt: 'Projects' },
         // { id: 2, image: projectImage2, alt: 'Project 2' },
         // { id: 3, image: projectImage3, alt: 'Project 3' },
         // { id: 4, image: projectImage4, alt: 'Project 4' },
@@ -27,27 +27,19 @@ const Projects = () => {
       ],
     },
     {
-      category: 'Small-Businesses',
+      category: 'Websites',
       projects: [
-        { id: 1, image: projectImage1, alt: 'Small Businesses Project 1' },
+        { id: 1, image: projectImage2, alt: 'Websites' },
         // { id: 2, image: projectImage2, alt: 'Small Businesses Project 2' },
         
       ],
     },
     {
-      category: 'Non-Profit',
+      category: 'Apps',
       projects: [
-        { id: 1, image: projectImage3, alt: 'Non-Profit Project 1' },
+        { id: 1, image: projectImage3, alt: 'Apps' },
         // { id: 2, image: projectImage4, alt: 'Non-Profit Project 2' },
         
-      ],
-    },
-    {
-      category: 'E-Commerce',
-      projects: [
-        { id: 1, image: projectImage3, alt: 'E-Commerce Project 1' },
-        // { id: 2, image: projectImage4, alt: 'E-Commerce Project 2' },
-
       ],
     },
     // Add more categories and their projects as needed...
@@ -77,22 +69,16 @@ const Projects = () => {
           All
         </button>
         <button
-          className={category === 'Small-Businesses' ? 'active' : ''}
-          onClick={() => setCategory('Small-Businesses')}
+          className={category === 'Websites' ? 'active' : ''}
+          onClick={() => setCategory('Websites')}
         >
-          Small Businesses
+          Websites
         </button>
         <button
-          className={category === 'Non-Profit' ? 'active' : ''}
-          onClick={() => setCategory('Non-Profit')}
+          className={category === 'Apps' ? 'active' : ''}
+          onClick={() => setCategory('Apps')}
         >
-          Non-Profit
-        </button>
-        <button
-          className={category === 'E-Commerce' ? 'active' : ''}
-          onClick={() => setCategory('E-Commerce')}
-        >
-          E-Commerce
+          Apps
         </button>
       </div>
       <p className="project-note">Click on the image to see the projects</p>
