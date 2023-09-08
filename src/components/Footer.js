@@ -28,7 +28,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="email">
-          <a href='mailto:abdinajka@gmail.com' className='email-link'>info@qualitydesigns.com</a>
+          <a href='mailto:info@qualitydesigns.site' className='email-link'>info@qualitydesigns.site</a>
         </div>
       </div>
       <div className="copyright">
