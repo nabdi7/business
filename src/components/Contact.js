@@ -38,7 +38,7 @@ const Contact = () => {
           setEmail('');
           setMessage('');
           setFormSubmitted(false);
-        }, 2000);
+        }, 500);
       } else {
         // Handle error if email sending fails
       }
