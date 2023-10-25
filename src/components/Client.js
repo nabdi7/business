@@ -15,7 +15,7 @@ const Client = () => {
         <h1>Our Clients</h1>
         <p className="text">Our work speaks for itself. We deliver an outstanding service custom-tailored to each and every one of our clients — big or small.</p>
       <div>
-        <Marquee direction="left" speed={30} >
+        <Marquee direction="left" speed={60} >
           <div className="image_wrapper">
             <img src={img1} alt="" />
           </div>
