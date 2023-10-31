@@ -4,7 +4,7 @@ import missionImage from '../png/about.jpg';
 import { FaLightbulb, FaFileAlt, FaPalette, FaCode, FaDesktop, FaRocket, FaTrophy } from 'react-icons/fa';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import waveImage from '../png/wave6.svg';
-import memberImage1 from '../png/user.jpg';
+import memberImage1 from '../png/najib.jpg';
 import memberImage2 from '../png/user.jpg';
 import memberImage3 from '../png/user.jpg';
 import Client from './Client';
@@ -152,7 +152,7 @@ const About = () => {
           {/* Team Member 1 */}
           <div className="team-member">
             <div className="team-member__image">
-              <img src={memberImage1} alt="Founder" />
+              <img src={memberImage1}  alt="Founder" />
             </div>
             <div className="team-member__body">
               <h3 className="team-member__title">Najib Abdi</h3>

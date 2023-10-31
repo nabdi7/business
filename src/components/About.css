@@ -261,13 +261,16 @@ div {
 
 .team-member__image img {
   max-width: 100%;
-  max-height: 200px;
-  margin-bottom: 10px;
+  height: auto;
 }
 
 .team-member__body {
   padding: 10px;
   text-align: left;
+}
+
+.team-member__image {
+  width: 100%;
 }
 
 .team-member__title {
@@ -378,9 +381,10 @@ div {
   }
 
   .team-members {
-    display: grid; /* Use CSS grid for the team members container */
+    display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px; 
+    /* grid-template-columns: 1fr; */
   }
 
   .team-member {
