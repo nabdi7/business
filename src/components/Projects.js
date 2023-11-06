@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './Projects.css';
 import waveImage from '../png/wave6.svg';
 import projectImage1 from '../png/coming.png';
-import projectImage2 from '../png/coming.png';
-import projectImage3 from '../png/coming.png';
+import projectImage2 from '../png/masjid3.png';
+import projectImage3 from '../png/restaurant.png';
 import projectImage4 from '../png/coming.png';
 import projectImage5 from '../png/coming.png';
 import projectImage6 from '../png/coming.png';
@@ -18,7 +18,7 @@ const Projects = () => {
     {
       category: 'All',
       projects: [
-        { id: 1, image: projectImage1, alt: 'Projects' },
+        // { id: 1, image: projectImage1, alt: 'Projects' },
         // { id: 2, image: projectImage2, alt: 'Project 2' },
         // { id: 3, image: projectImage3, alt: 'Project 3' },
         // { id: 4, image: projectImage4, alt: 'Project 4' },
