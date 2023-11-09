@@ -1,50 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from "emailjs-com";
 import './Contact.css';
 import waveImage from '../png/wave6.svg';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF } from 'react-icons/fa';
 import { BsInstagram, BsTwitter } from 'react-icons/bs';
 
 const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [contactMessage, setContactMessage] = useState("");
+  const [user_name, setName] = useState(""); 
+  const [user_email, setEmail] = useState(""); 
+  const [user_phone, setPhone] = useState(""); 
+  const [message, setMessage] = useState("");
+  const formRef = useRef();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const userData = {
-      name,
-      phone,
-      email,
-      message,
-    };
-
-    try {
-      const response = await fetch('https://formsubmit.co/2eb3d874662e4f94069e03c29b8b2226', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+    emailjs
+      .sendForm("service_e615ubi", "template_6wnifn3", formRef.current, "XdjzZbnaWuPXzJGcw")
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result);
+          setFormSubmitted(true);
+          setContactMessage("We got your message. Thanks!");
+          setTimeout(() => {
+            setContactMessage("");
+            setName("");
+            setPhone("");
+            setEmail("");
+            setMessage("");
+            setFormSubmitted(false);
+          }, 2000);
         },
-        body: JSON.stringify(userData),
-      });
+        (error) => {
+          console.error("Email sending failed:", error);
 
-      if (response.ok) {
-        setFormSubmitted(true);
-        setTimeout(() => {
-          setName('');
-          setPhone('');
-          setEmail('');
-          setMessage('');
-          setFormSubmitted(false);
-        }, 1000);
-      } else {
-        // Handle error if email sending fails
-      }
-    } catch (error) {
-      // Handle any network or unexpected errors
-    }
+        }
+      );
   };
 
   return (
@@ -90,39 +83,43 @@ const Contact = () => {
         </div>
         <div className='contact-sections'>
           <div className='get-in-touch'>
-            <h3>Get In Touch</h3>
-            <form onSubmit={handleSubmit}>
-              <input
-                type='text'
-                placeholder='Name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-              <input
-                type='tel'
-                placeholder='Phone'
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-              <input
-                type='email'
-                placeholder='Email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <textarea
-                placeholder='Your Message'
-                rows='5'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              ></textarea>
-              <button className='send-message-button' type='submit'>
-                Send Message
-              </button>
+          <h3>Get In Touch</h3>
+              <form ref={formRef} onSubmit={sendEmail}>
+                <input
+                  type='text'
+                  placeholder='Name'
+                  name='user_name' 
+                  value={user_name} 
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <input
+                  type='tel'
+                  placeholder='Phone'
+                  name='user_phone' 
+                  value={user_phone} 
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+                <input
+                  type='email'
+                  placeholder='Email'
+                  name='user_email' 
+                  value={user_email} 
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <textarea
+                  placeholder='Your Message'
+                  rows='5'
+                  name='message' 
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+                <button className='send-message-button' type='submit'>
+                  Send Message
+                </button>
               {formSubmitted && (
                 <p className='thank-you-message'>
                   Thanks for your message!
