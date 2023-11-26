@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import waveImage from '../png/wave6.svg';
-import projectImage1 from '../png/coming.png';
-import projectImage2 from '../png/masjid3.png';
-import projectImage3 from '../png/restaurant.png';
-import projectImage4 from '../png/coming.png';
-import projectImage5 from '../png/coming.png';
-import projectImage6 from '../png/coming.png';
+import projectImage1 from '../png/hadiya-transparent.png';
+import projectImage2 from '../png/images.png';
+import projectImage3 from '../png/Neighborhood.svg';
+import projectImage4 from '../png/restaurant.png';
+// import projectImage5 from '../png/emotions.png';
+// import projectImage6 from '../png/coming.png';
 // import Subscription from './Subscription';
 // import './Subscription.css';
 
@@ -29,16 +29,17 @@ const Projects = () => {
     {
       category: 'Websites',
       projects: [
-        { id: 1, image: projectImage2, alt: 'Websites' },
-        // { id: 2, image: projectImage2, alt: 'Small Businesses Project 2' },
+        { id: 1, image: projectImage1, alt: 'Hadiya' },
+        { id: 2, image: projectImage2, alt: 'Al huda' },
+        { id: 3, image: projectImage3, alt: 'Neighborhood' },
         
       ],
     },
     {
       category: 'Apps',
       projects: [
-        { id: 1, image: projectImage3, alt: 'Apps' },
-        // { id: 2, image: projectImage4, alt: 'Non-Profit Project 2' },
+        { id: 1, image: projectImage4, alt: 'Apps' },
+        // { id: 2, image: projectImage5, alt: 'Non-Profit Project 2' },
         
       ],
     },
