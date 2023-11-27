@@ -4,7 +4,7 @@ import missionImage from '../png/about.jpg';
 import { FaLightbulb, FaFileAlt, FaPalette, FaCode, FaDesktop, FaRocket, FaTrophy } from 'react-icons/fa';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import waveImage from '../png/wave6.svg';
-import memberImage1 from '../png/najib.jpg';
+import memberImage1 from '../png/najib4.jpg';
 import memberImage2 from '../png/user.jpg';
 import memberImage3 from '../png/user.jpg';
 import Client from './Client';
