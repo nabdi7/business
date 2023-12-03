@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import waveImage from '../png/wave6.svg';
-import projectImage1 from '../png/hadiya-transparent.png';
+import projectImage1 from '../png/almaas-transparent.png';
 import projectImage2 from '../png/images.png';
 import projectImage3 from '../png/Neighborhood.svg';
 import projectImage4 from '../png/restaurant.png';
@@ -11,9 +11,9 @@ import projectImage4 from '../png/restaurant.png';
 // import './Subscription.css';
 
 const Projects = () => {
-  const [category, setCategory] = useState('All'); // State to track the selected category
+  const [category, setCategory] = useState('All'); 
 
-  // Define the project data for different categories
+  // the project data for different categories
   const projectData = [
     {
       category: 'All',
@@ -29,7 +29,7 @@ const Projects = () => {
     {
       category: 'Websites',
       projects: [
-        { id: 1, image: projectImage1, alt: 'Hadiya' },
+        { id: 1, image: projectImage1, alt: 'Almaas' },
         { id: 2, image: projectImage2, alt: 'Al huda' },
         { id: 3, image: projectImage3, alt: 'Neighborhood' },
         
@@ -86,9 +86,17 @@ const Projects = () => {
       <div className="project-list">
         {filteredProjects.map((project) => (
           <div className="project-item" key={project.id}>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            {project.alt === 'Almaas' ? (
+              <a href="https://almaaschildcare.com" target="_blank" rel="noopener noreferrer">
+                <img src={project.image} alt={project.alt} />
+              </a>
+            ) : project.alt === 'Al huda' ? (
+              <a href="https://alhudaislamiccenter.com" target="_blank" rel="noopener noreferrer">
+                <img src={project.image} alt={project.alt} />
+              </a>
+            ) : (
               <img src={project.image} alt={project.alt} />
-            </a>
+            )}
           </div>
         ))}
       </div>
