@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import waveImage from '../png/wave6.svg';
-import projectImage1 from '../png/almaas-transparent.png';
+import projectImage1 from '../png/almaasCover.png';
 import projectImage2 from '../png/images.png';
 import projectImage3 from '../png/Neighborhood.svg';
 import projectImage4 from '../png/restaurant.png';

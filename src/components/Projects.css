@@ -95,7 +95,7 @@ div {
   position: relative;
   text-align: center;
   cursor: pointer;
-  width: 350px;
+  width: 400px;
   height: 330px;
   border: 2px solid #284B63;
 }
@@ -103,11 +103,10 @@ div {
 .project-item img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  object-fit: cover ;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  
 }
   
 .project-item:hover img {
@@ -133,11 +132,11 @@ div {
   display: none;
 }
   
-/* Mobile Styles */
+
 @media (max-width: 768px) {
   .projects-page {
     padding: 20px;
-    max-width: 100%;
+    max-width: 105%;
   }
   .project_wave-container {
     position: relative;
@@ -161,10 +160,15 @@ div {
   }
   
   .project-item {
-    width: 100%; 
-    height: auto; 
+    width: 102%; 
+    height: auto;
   }
 
+  .project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
     
 }
   
