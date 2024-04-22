@@ -5,7 +5,7 @@ import projectImage1 from '../png/almaasCover.png';
 import projectImage2 from '../png/images.png';
 import projectImage3 from '../png/hadiya-transparent.png';
 import projectImage4 from '../png/restaurant.png';
-// import projectImage5 from '../png/emotions.png';
+import projectImage5 from '../png/lovingcare-logo-transparent.png';
 // import projectImage6 from '../png/coming.png';
 // import Subscription from './Subscription';
 // import './Subscription.css';
@@ -32,6 +32,7 @@ const Projects = () => {
         { id: 1, image: projectImage1, alt: 'Almaas' },
         { id: 2, image: projectImage2, alt: 'Al huda' },
         { id: 3, image: projectImage3, alt: 'Hadiya' },
+        { id: 3, image: projectImage5, alt: 'Lovingcare' },
         
       ],
     },
@@ -96,6 +97,10 @@ const Projects = () => {
               </a>
             ) : project.alt === 'Hadiya' ? (
               <a href="https://hadiyachildcare.com" target="_blank" rel="noopener noreferrer">
+                <img src={project.image} alt={project.alt} />
+              </a>
+            ): project.alt === 'Lovingcare' ? (
+              <a href="https://lovingcarechildcare.com" target="_blank" rel="noopener noreferrer">
                 <img src={project.image} alt={project.alt} />
               </a>
             ): (
