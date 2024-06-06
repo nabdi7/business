@@ -6,7 +6,7 @@ import img2 from '../png/looo11.png';
 // import img3 from '../png/hadiya.svg';
 import img4 from '../png/Neighborhood.svg';
 import img5 from '../png/emoti.png';
-// import img6 from '../png/client3.png';
+import img6 from '../png/brightsmiles.png';
 // import img7 from '../png/client3.png';
 
 const Client = () => {
@@ -31,10 +31,11 @@ const Client = () => {
           <div>
             <img src={img5} alt="" />
           </div>
-          {/*
+          
           <div className="image_wrapper">
             <img src={img6} alt="" />
           </div>
+          {/*
           <div className="image_wrapper">
             <img src={img7} alt="" />
           </div> */}
