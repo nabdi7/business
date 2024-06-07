@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_e615ubi", "template_6wnifn3", formRef.current, "XdjzZbnaWuPXzJGcw")
+      .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, formRef.current, process.env.REACT_APP_USER_ID)
       .then(
         (result) => {
           console.log("Email sent successfully:", result);
